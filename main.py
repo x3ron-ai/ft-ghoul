@@ -1,3 +1,5 @@
+# -*- coding: <utf-8> -*-
+
 from VK_cfg import settings
 import vk_api
 from vk_api import VkUpload
