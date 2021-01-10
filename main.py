@@ -1685,8 +1685,8 @@ while True:
 							    group_ID,
 							    'Я должен тебе отвечать что-то умное, но мне еще это не добавили)'
 							)
-
-					'''elif mes_text[0] in ['!botban']:
+					'''
+					elif mes_text[0] in ['!botban']:
 						linked()
 						if event.object.message['from_id'] in admins_bot_GG:
 							try:
@@ -1820,7 +1820,9 @@ while True:
 							write_mes(
 							    group_ID,
 							    'Список забаненных юзеров пока что пустует')
-						#except:'''
+						except:
+							pass
+						'''
 
 					elif mes_text[0] in ['/автобот']:
 						cursor.execute("""CREATE TABLE IF NOT EXISTS autobot(
