@@ -12,7 +12,7 @@ import sqlite3
 from bs4 import BeautifulSoup
 import json
 from PIL import Image, ImageDraw, ImageFont
-from replit import db
+# from replit import db
 import datetime as dt
 import pyowm
 import xml.etree.ElementTree as ET
@@ -187,7 +187,8 @@ def get_group(id):
 
 
 def ban_check(id):
-	banned_list = db.keys()
+	return True
+	'''banned_list = db.keys()
 	aaa = []
 	id = str(id)
 	for aa in banned_list:
@@ -201,7 +202,7 @@ def ban_check(id):
 			else:
 				return True
 		except:
-			return True
+			return True'''
 
 
 def time_pret(utime):
@@ -1685,7 +1686,7 @@ while True:
 							    'Я должен тебе отвечать что-то умное, но мне еще это не добавили)'
 							)
 
-					elif mes_text[0] in ['!botban']:
+					'''elif mes_text[0] in ['!botban']:
 						linked()
 						if event.object.message['from_id'] in admins_bot_GG:
 							try:
@@ -1819,7 +1820,8 @@ while True:
 							write_mes(
 							    group_ID,
 							    'Список забаненных юзеров пока что пустует')
-						#except:
+						#except:'''
+
 					elif mes_text[0] in ['/автобот']:
 						cursor.execute("""CREATE TABLE IF NOT EXISTS autobot(
 							id INT
